@@ -1,12 +1,13 @@
 import Link from "next/link";
 
 export default function ContactPage() {
+    const nohp = "628123456789"; 
   return (
     <section className="min-h-screen bg-linear-to-bl from-blue-950/30 to-blue-900/40 text-white flex items-center justify-center px-6 py-20">
       <div className="max-w-3xl w-full text-center bg-white/10 backdrop-blur-xl rounded-2xl p-10 border border-white/20 shadow-xl">
 
         {/* TITLE */}
-        <h1 className="text-5xl font-bold mb-2 tracking-wide">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-2 tracking-wide flex justify-center gap-1">
           <span className="text-white">TEMAN</span>
           <span className="text-orange-500">MALANG</span>
         </h1>
@@ -34,8 +35,10 @@ export default function ContactPage() {
               <span className="text-white text-xl">📱</span>
             </div>
             <div className="text-left">
-              <p className="text-lg font-semibold">WhatsApp</p>
-              <p className="text-gray-300">+628 123 456 789</p>
+                <Link href={`https://wa.me/${nohp}`} target="_blank">
+                    <p className="text-lg font-semibold">WhatsApp</p>
+                    <p className="text-gray-300">+{nohp}</p>
+                </Link>
             </div>
           </a>
 
@@ -44,10 +47,10 @@ export default function ContactPage() {
             href="mailto:admin@temanmalang.com"
             className="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-all p-4 rounded-xl cursor-pointer"
           >
-            <div className="bg-gray-700 w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+            <div className="bg-gray-700 p-2 rounded-full flex items-center justify-center shadow-md">
               <span className="text-white text-xl">✉️</span>
             </div>
-            <div className="text-left">
+            <div className="text-left overflow-scroll sm:overflow-hidden">
               <p className="text-lg font-semibold">Email</p>
               <p className="text-gray-300">admin@temanmalang.com</p>
             </div>
