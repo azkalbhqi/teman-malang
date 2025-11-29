@@ -100,7 +100,7 @@ export default function Navbar() {
             </Link>
           ) : (
             <Link
-              href="/login"
+              href="/auth/login"
               onClick={() => setOpen(false)}
               className="block bg-orange-500 text-white px-4 py-2 rounded-lg text-center"
             >
