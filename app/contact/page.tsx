@@ -26,8 +26,8 @@ export default function ContactPage() {
         <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-xl space-y-6">
 
           {/* WhatsApp */}
-          <a
-            href="https://wa.me/628123456789"
+          <Link
+            href={`https://wa.me/${nohp}`}
             target="_blank"
             className="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-all p-4 rounded-xl cursor-pointer"
           >
@@ -40,10 +40,10 @@ export default function ContactPage() {
                     <p className="text-gray-300">+{nohp}</p>
                 </Link>
             </div>
-          </a>
+          </Link>
 
           {/* Email / Website */}
-          <a
+          <Link
             href="mailto:admin@temanmalang.com"
             className="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-all p-4 rounded-xl cursor-pointer"
           >
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <p className="text-lg font-semibold">Email</p>
               <p className="text-gray-300">admin@temanmalang.com</p>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* BUTTONS */}
